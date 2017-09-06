@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model ComicsInventory.ViewModels.HomeIndexViewModels
+<div class="row">
+    <div class="page" style="margin-top: -15px;">
+        <div class="col-md-6 pull-left">
+            <h2>
+                Welcome @User.Identity.Name <small class="mySmall">Staff Intranet</small>
+            </h2>
+        </div>
+        <div class="col-md-6">
+            <h2 class="pull-right">
+                <a href="http://stores.ebay.co.uk/tappaucomics" class="btn btn-ebay" title="Opens in new Tab" role="button" target="_blank">
+                    <i class="fa fa-fw fa-external-link addSpaceRight"></i> eBay Store
+                </a>
+                <a href="https://www.paypal.com/uk/cgi-bin/?cmd=_email_receipt" class="btn btn-payPal" target="_blank" title="Opens in new Tab" role="button"><i class="fa fa-fw fa-paypal addSpaceRight"></i>PayPal Account</a>
+            </h2>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="control-label">Publisher</label>
+    @Html.DropDownListFor(x => x.SelectedPublisherId, Model.PublisherList, "-- Select --", new {@class = "input-sm form-control", @id = "ddlPublishers"})
+</div>
+<hr style="margin-top: 10px;"/>
+<div class="row">
+    <div class="col-md-10 col-xs-12 col-sm-12">
+        @Html.Action("LatestAddition")
+    </div>
+</div>

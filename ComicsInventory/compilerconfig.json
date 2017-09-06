@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Content/My_Bootstrap.css",
+    "inputFile": "Content/My_Bootstrap.less"
+  },
+  {
+    "outputFile": "Content/Darkly_Bootstrap.css",
+    "inputFile": "Content/Darkly_Bootstrap.less"
+  }
+]
