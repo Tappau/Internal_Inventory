@@ -218,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\images\gcd_logo.png" />
+    <Content Include="Content\my-bootstrap.css">
+      <DependentUpon>my-bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="Content\my-bootstrap.min.css">
+      <DependentUpon>my-bootstrap.css</DependentUpon>
+    </Content>
     <Content Include="smtp-settings.config" />
     <None Include="Views\Samples\blank.cshtml" />
     <None Include="Views\Samples\buttons.cshtml" />
@@ -264,12 +270,6 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\my-bootstrap.css">
-      <DependentUpon>my-bootstrap.less</DependentUpon>
-    </Content>
-    <Content Include="Content\my-bootstrap.min.css">
-      <DependentUpon>my-bootstrap.css</DependentUpon>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
@@ -355,7 +355,6 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="Content\sb-admin-2.less" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\fontawesome-webfont.woff" />
