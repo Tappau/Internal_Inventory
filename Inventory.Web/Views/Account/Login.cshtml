@@ -1,0 +1,115 @@
+﻿@using Inventory.Web.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "";
+}
+<style type="text/css">.footer { }</style>
+
+<head>
+    <title>@ViewBag.Title - Tappau Comics</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <meta name="description" content="Login to Tappau Comics" />
+    <meta name="author" content="Calvin Tapp" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    <style>
+        body{ margin-bottom: 60px;}
+        html{ position: relative;min-height: 100%;}
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Please Sign In
+                        <i class="fa fa-unlock-alt pull-right"></i>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div id="loginForm">
+                        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new {role = "form"}))
+                        {
+                            @Html.AntiForgeryToken()
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="sr-only">User Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-fw fa-user"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.UserName, new {@class = "form-control", @autofocus = true, @placeholder = "User Name"})
+                                    </div>
+                                    @Html.ValidationMessageFor(m => m.UserName, "", new {@class = "text-danger"})
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-fw fa-key"></i>
+                                        </span>
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control",  @placeholder = "Password" })
+                                           
+                                    </div>
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            @Html.CheckBoxFor(m => m.RememberMe)&nbsp;Remember Me
+                                        </label>
+                                    </div>
+                                </div>
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <input type="submit" value="Log In" class="btn btn-lg btn-success btn-block"/>
+                            </fieldset>
+                        }
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Information -->
+    <div class="row">
+            
+    </div>
+        
+        
+</div>
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="col-md-6">
+            <p class="text-left">
+                <i class="fa fa-copyright fa-lg"></i>
+                <script>
+                    var date = new Date, year = date.getFullYear();
+                    document.write(year);
+                </script>&nbsp;&nbsp;Tappau Comics
+
+            </p>
+        </div>
+            
+        <div class="col-md-6">
+            <p class="text-right">
+                <i class="fa fa-creative-commons fa-lg"></i>
+                Data courtesy of the <a href="https://www.comics.org/">Grand Comics Database&trade;</a> under a <a href="https://creativecommons.org/licenses/by/3.0/legalcode">Creative Commons Attribution license</a>
+            </p>
+        </div>
+            
+       
+        
+
+    </div>     
+    
+            
+</footer>
+</body>
+
