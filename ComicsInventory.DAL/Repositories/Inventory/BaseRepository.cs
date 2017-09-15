@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using ComicsInventory.DAL.Entities;
 using ComicsInventory.DAL.Repositories.Interfaces;
 
@@ -32,6 +33,12 @@ namespace ComicsInventory.DAL.Repositories.Inventory
         {
             return _tbl.Find(id);
         }
+
+        public async Task<T> GetByIdAsync(int id)
+        {
+            return await _tbl.FindAsync(id);
+        }
+        
 
         public void Insert(T entity)
         {

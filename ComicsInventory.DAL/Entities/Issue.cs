@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
@@ -35,15 +36,19 @@ namespace ComicsInventory.DAL.Entities
         public string frequency { get; set; }
 
         [StringLength(1600)]
+        [Display(Name = "Editor")]
         public string editor { get; set; }
 
         [StringLength(13)]
+
         public string ISBN { get; set; }
 
         [StringLength(38)]
         public string barcode { get; set; }
 
         public bool? IsActive { get; set; }
+
+        [Display(Name = "Added On")]
         public DateTime? AddedOn { get; set; }
 
         [SuppressMessage("ReSharper", "InconsistentNaming")]
