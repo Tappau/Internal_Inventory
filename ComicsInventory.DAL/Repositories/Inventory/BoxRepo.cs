@@ -24,6 +24,7 @@ namespace ComicsInventory.DAL.Repositories.Inventory
             _db = dbContext;
         }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Retires the specified box identifier.
         /// </summary>
@@ -35,6 +36,7 @@ namespace ComicsInventory.DAL.Repositories.Inventory
             Save();
         }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Gets highest BoxID and adds one to work out what the next box number will be
         ///     This is purely for displaying of information during creation of a new box
@@ -50,6 +52,7 @@ namespace ComicsInventory.DAL.Repositories.Inventory
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Retrives Select group of data related to given Box ID
         /// </summary>

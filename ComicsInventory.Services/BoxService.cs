@@ -1,6 +1,8 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using System.Drawing;
+using ComicsInventory.DAL.DTOs;
+using ComicsInventory.DAL.Repositories.Interfaces;
 using ComicsInventory.Services.BLLInterfaces;
 using ZXing;
 using ZXing.QrCode;
@@ -10,6 +12,13 @@ namespace ComicsInventory.Services
 {
   public  class BoxService : IBoxService
   {
+      private readonly IBoxRepo _boxRepo;
+
+      public BoxService(IBoxRepo box)
+      {
+          _boxRepo = box;
+      }
+
         public Bitmap CreateQrCode(string urlToEncode, int boxId)
         {
             string url; //to be set upon checking of sent parameters
@@ -39,5 +48,10 @@ namespace ComicsInventory.Services
             var x = zXingWriter.Write(url);
             return x;
         }
+
+      public IEnumerable<BoxContentDto> GetBoxIssueDetails(int boxId)
+      {
+          return _boxRepo.GetBoxContents(boxId);
+      }
     }
 }
