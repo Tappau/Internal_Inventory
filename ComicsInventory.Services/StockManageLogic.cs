@@ -5,7 +5,7 @@ using System.Linq;
 using ComicsInventory.DAL;
 using ComicsInventory.DAL.DTOs;
 using ComicsInventory.DAL.Entities;
-using ComicsInventory.DAL.Repositories.Inventory;
+using ComicsInventory.DAL.Repository.Inventory;
 
 // ReSharper disable AssignNullToNotNullAttribute
 

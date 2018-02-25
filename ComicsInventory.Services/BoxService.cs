@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using ComicsInventory.DAL.DTOs;
-using ComicsInventory.DAL.Repositories.Interfaces;
+using ComicsInventory.DAL.Repository.Interfaces;
 using ComicsInventory.Services.BLLInterfaces;
 using ZXing;
 using ZXing.QrCode;

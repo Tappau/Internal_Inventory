@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using ComicsInventory.DAL;
 using ComicsInventory.DAL.DTOs;
 using ComicsInventory.DAL.Entities;
-using ComicsInventory.DAL.Repositories.Interfaces;
+using ComicsInventory.DAL.Repository.Interfaces;
 
 namespace ComicsInventory.Services
 {

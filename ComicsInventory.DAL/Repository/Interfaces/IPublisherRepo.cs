@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using ComicsInventory.DAL.Entities;
 
-namespace ComicsInventory.DAL.Repositories.Interfaces
+namespace ComicsInventory.DAL.Repository.Interfaces
 {
     public interface IPublisherRepo
     {

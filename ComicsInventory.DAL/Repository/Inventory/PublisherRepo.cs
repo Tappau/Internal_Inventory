@@ -2,10 +2,10 @@
 using System.Data;
 using System.Data.SqlClient;
 using ComicsInventory.DAL.Entities;
-using ComicsInventory.DAL.Repositories.Interfaces;
+using ComicsInventory.DAL.Repository.Interfaces;
 using Dapper;
 
-namespace ComicsInventory.DAL.Repositories.Inventory
+namespace ComicsInventory.DAL.Repository.Inventory
 {
     public class PublisherRepo : BaseRepository<Publisher>, IPublisherRepo
     {

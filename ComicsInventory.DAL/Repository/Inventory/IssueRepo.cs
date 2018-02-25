@@ -6,10 +6,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using ComicsInventory.DAL.DTOs;
 using ComicsInventory.DAL.Entities;
-using ComicsInventory.DAL.Repositories.Interfaces;
+using ComicsInventory.DAL.Repository.Interfaces;
 using Dapper;
 
-namespace ComicsInventory.DAL.Repositories.Inventory
+namespace ComicsInventory.DAL.Repository.Inventory
 {
     public class IssueRepo : BaseRepository<Issue>, IIssueRepo
     {

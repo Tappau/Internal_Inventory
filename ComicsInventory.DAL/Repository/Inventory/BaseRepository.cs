@@ -4,9 +4,9 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using ComicsInventory.DAL.Entities;
-using ComicsInventory.DAL.Repositories.Interfaces;
+using ComicsInventory.DAL.Repository.Interfaces;
 
-namespace ComicsInventory.DAL.Repositories.Inventory
+namespace ComicsInventory.DAL.Repository.Inventory
 {
     public abstract class BaseRepository<T> : IBaseRepository<T> where T : class
     {

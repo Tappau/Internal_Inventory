@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ComicsInventory.DAL.Repositories.Interfaces
+namespace ComicsInventory.DAL.Repository.Interfaces
 {
     public interface IBaseRepository<T> where T : class
     {

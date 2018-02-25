@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web.Mvc;
 using ComicsInventory.DAL.DTOs;
-using ComicsInventory.DAL.Repositories.Interfaces;
+using ComicsInventory.DAL.Repository.Interfaces;
 using ComicsInventory.Services.BLLInterfaces;
 
 
